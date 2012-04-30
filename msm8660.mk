@@ -106,6 +106,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
-
-PRODUCT_COPY_FILES += \
-    device/htc/msm8660-common/prebuilt/init.post_boot.sh:system/etc/init.post_boot.sh
