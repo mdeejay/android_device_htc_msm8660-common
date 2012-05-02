@@ -37,8 +37,6 @@ PRODUCT_COPY_FILES += \
 # Media config
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/msm8660-common/configs/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-    device/htc/msm8660-common/configs/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
     device/htc/msm8660-common/configs/thermald.conf:system/etc/thermald.conf
 
 # QCOM Display
@@ -67,6 +65,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+
+# HDMI
+PRODUCT_PACKAGES += \
+    hdmid
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -97,6 +99,11 @@ PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw \
     device/htc/msm8660-common/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/msm8660-common/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
+
+# Common Qualcomm scripts
+PRODUCT_COPY_FILES += \
+    device/htc/msm8660-common/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
+    device/htc/msm8660-common/prebuilt/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh
 
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
